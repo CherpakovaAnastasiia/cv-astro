@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="About | Cherpakova Anastasiia"
+  description="About Cherpakova Anastasiia"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero title="About" tagline="Découvrez mon parcours et mes compétences.">
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work-a.jpg"
+          alt="Cherpakova Anastasiia at work"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Grâce à mes diplômes en art, j'ai suffisamment de créativité et de
+            dynamisme créatif pour mener à bien des projets. Ma formation après
+            l'école a duré 5 ans à l'université au département d'architecture
+            puis 2 ans à l'Académie des Arts. Je travaille sur des projets
+            combinant mes connaissances du domaine de l'art avec celles d'un
+            développeur full stack.
+          </p>
+          <p>
+            J'aime travailler en équipe. J'aime trouver une solution ensemble.
+            Cela permet d’examiner le problème sous différents angles et de
+            trouver la solution la plus adaptée. J'ai également 13 ans
+            d'expérience en tant qu'entrepreneur privé, ce qui témoigne de mon
+            autonomie et de ma capacité à prendre des décisions.
+          </p>
+          <p>
+            Je connais 4 langues, ce qui aide grandement à travailler et à
+            communiquer avec les clients. Je peux parler ukrainien (langue
+            maternelle), russe (langue maternelle), français et anglais.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Diplômes</h2>
+
+        <div class="content">
+          <h5>Développeur full stack</h5>
+          <p>2023-2024</p>
+          <p>Ecole d'informatique Kiev, Ukraine</p>
+        </div>
+        <div class="content">
+          <h5>Découvert des métiers du numérique (stagiaire)</h5>
+          <p>2023</p>
+          <p>CCI CAMPUS ALSACE - CCIT ALSACE EUROMÉTROPOLE</p>
+        </div>
+        <div class="content">
+          <h5>Master d'art de l'argile</h5>
+          <p>2007-2008</p>
+          <p>
+            Académie d'Etat des arts décoratifs et appliqués et du design Kiev,
+            Ukraine
+          </p>
+        </div>
+        <div class="content">
+          <h5>Artiste céramiste</h5>
+          <p>2001-2006</p>
+          <p>Université technique nationale Poltava, Ukraine</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <h5>
+            Créative, sérieuse, responsable, organisé, travailleuse, ponctuelle,
+            autonome, curieuse, dynamique, travail d'équipe
+          </h5>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
