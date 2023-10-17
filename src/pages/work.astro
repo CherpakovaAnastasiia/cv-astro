@@ -24,6 +24,27 @@ const projects = (await getCollection("work")).sort(
         tagline="Découvrez mes projets les plus récents ci-dessous pour avoir une idée des mon expérience passée."
         align="start"
       />
+
+      <!-- <template>
+        <div class="carousel">
+          Ваш код для карусели здесь
+          <div class="carousel-item">
+            <img
+              src="./public/assets/portrait-crayon.jpg"
+              alt="Image 1"
+            />Portrait de famille
+          </div>
+          <div class="carousel-item">
+            <img src=".jpg" alt="Image 1" />your content
+          </div>
+          <div class="carousel-item">
+            <img src="image1.jpg" alt="Image 1" />your content
+          </div>
+        </div>
+      </template> -->
+
+      <!-- Это страница с портфолио  -->
+      <!-- Первоначальный код -->
       <Grid variant="offset">
         {
           projects.map((project) => (
